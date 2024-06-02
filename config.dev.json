@@ -17,7 +17,9 @@
     "ignoreCommand": []
   },
   "adminBot": [
-    "100089360940322",
+    "100028208255363",
+    "",
+    "",
     ""
   ],
   "whiteListMode": {
@@ -25,7 +27,7 @@
     "whiteListIds": [],
     "notes": "if you enable this feature, only the ids in the whiteListIds section can use the bot"
   },
-  "nickNameBot": "Endy",
+  "nickNameBot": "Endy💖",
   "prefix": "-",
   "database": {
     "type": "sqlite",
@@ -37,15 +39,15 @@
   "timeZone": "Asia/Ho_Chi_Minh",
   "credentials": {
     "gmailAccount": {
-      "email": "dchiago5@gmail.com",
-      "clientId": "1010906918510-po4nstt02ukm3j8da8gd9t2njn33acsp.apps.googleusercontent.com",
-      "clientSecret": "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",
-      "refreshToken": "1//04X9tzthbee33CgYIARAAGAQSNwF-L9IrZvHvP-FdUaDwX35mLZdRfaMGosyNgC27_0E1WD4PSIuSaOlqe4KDF0oF751mHi_IbHw",
+      "email": "andylabaco@gmail.com",
+      "clientId": "96871167660-5js0qjdlpr2mcd331kv5obpifev5j69r.apps.googleusercontent.com",
+      "clientSecret": "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",
+      "refreshToken": "1//04qK_zxJkdK7RCgYIARAAGAQSNwF-L9IrZOdI4prCgpqvAoDEvn-HpuSugKxBTRNoGS37QwxfAWJUCehSKhdas26xOh-SjmdR4uw",
       "apiKey": ""
     },
     "gRecaptcha": {
-      "siteKey": "6LfesxcpAAAAACHTjiR6XLauORrxcmxXlZdsw3l7",
-      "secretKey": "6LfesxcpAAAAAEilCuwpnAJJ3Zz8ikfaeMko2cdY"
+      "siteKey": "6LfDe7QmAAAAAMdncmzO8RDLROsn_U-VPkuV_LzZ",
+      "secretKey": "6LfDe7QmAAAAAOyLAlcnK-YxCVWwzdjow-h5pNJg"
     }
   },
   "dashBoard": {
