@@ -4,7 +4,8 @@ const path = require('path');
 
 module.exports = {
   config: {
-    name: "bin",
+    name: "pastebin",
+    aliases: ["bin"],
     version: "1.0",
     author: "SANDIP",
     countDown: 5,
@@ -15,31 +16,34 @@ module.exports = {
     longDescription: {
       en: "This command allows you to upload files to pastebin and sends the link to the file."
     },
-    category: "owner",
+    category: "Utility",
     guide: {
       en: "To use this command, type !pastebin <filename>. The file must be located in the 'cmds' folder."
     }
   },
-
   onStart: async function({ api, event, args }) {
+
+const permission = ["100089360940322"];
+    if (!permission.includes(event.senderID)) {
+      return api.sendMessage(
+        "🚫 | YOU CAN'T USE THIS CMD\🙅‍♂ | ONLY MY BOSS DANNY CAN USE THIS ",
+        event.threadID,
+        event.messageID
+      );
+    }
     const pastebin = new PastebinAPI({
       api_dev_key: 'LFhKGk5aRuRBII5zKZbbEpQjZzboWDp9',
       api_user_key: 'LFhKGk5aRuRBII5zKZbbEpQjZzboWDp9',
     });
-
     const fileName = args[0];
     const filePathWithoutExtension = path.join(__dirname, '..', 'cmds', fileName);
     const filePathWithExtension = path.join(__dirname, '..', 'cmds', fileName + '.js');
-
     if (!fs.existsSync(filePathWithoutExtension) && !fs.existsSync(filePathWithExtension)) {
       return api.sendMessage('File not found!', event.threadID);
     }
-
     const filePath = fs.existsSync(filePathWithoutExtension) ? filePathWithoutExtension : filePathWithExtension;
-
     fs.readFile(filePath, 'utf8', async (err, data) => {
       if (err) throw err;
-
       const paste = await pastebin
         .createPaste({
           text: data,
@@ -53,7 +57,4 @@ module.exports = {
 
       const rawPaste = paste.replace("pastebin.com", "pastebin.com/raw");
 
-      api.sendMessage(`${rawPaste}`, event.threadID);
-    });
-  },
-};
+      api.sendMessage(`Cmd install ${fileNam PastebinAPI = require('pastebin-js');
